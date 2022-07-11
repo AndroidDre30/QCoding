@@ -1,0 +1,36 @@
+git init
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/AndroidDre30/QCoding.git
+git push -u origin main
+
+public class PrimeGod {
+	public static void main(String args[]){
+    // initialize variables
+		int status = 1;
+		int num = 3;
+		System.out.println("The first 100 numbers are: ");
+		
+		System.out.println(2);
+    // Create Loop for each number that is greater than or equal to 100
+		for (int i = 2; i <= 100;) {
+    // Create loop for the square root of each number greater than 2 increment plus 1
+			for(int j = 2; j <= Math.sqrt(num);j++) {
+				if(num%j == 0) {
+					status = 0;
+					break;
+				}
+			}
+      // Continue Loop and add 1 if Number does not equal 0
+			if(status != 0) {
+				System.out.println(num);
+				i++;
+			}
+			status =1;
+			num++;
+		}
+				
+		
+	}
+
+}
