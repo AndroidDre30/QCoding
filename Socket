@@ -1,0 +1,26 @@
+//AndroidDre
+import java.net.*;
+import java.io.*;
+import java.lang.*;
+public class ServerShock {
+	public static void main(String args[]) {
+		String data= "Connection established.";
+		
+		try {
+			ServerSocket s = new ServerSocket(4444);
+			Socket skt = s.accept();
+			System.out.println("connection established.\n");
+			PrintWriter out = new
+					PrintWriter(skt.getOutputStream(), true);
+			out.print(data);
+			out.close();
+			skt.close();
+			s.close();
+		}
+		
+		catch(Exception e) {
+			System.out.println("Oh Man! It didn't work!\n");
+		}
+	}
+
+}
